@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:background="#FFF"> 
+	
+	<LinearLayout
+		android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+		android:id="@+id/searchbar">
+
+		<include layout="@layout/search_searchbar" />
+		
+</LinearLayout>
+	    
+	<ListView 
+	    android:layout_below="@+id/searchbar"
+	    
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		
+		android:id="@android:id/list"
+		
+		android:cacheColorHint="#fff"
+		android:background="#fff"
+		android:divider="@drawable/shape_listview_divider" 
+		android:dividerHeight="1dp" 
+	/>
+
+
+                  
+
+
+	
+	<TextView 
+	    android:layout_below="@+id/searchbar"
+		android:id="@+id/failresults"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:textSize="18sp"
+		android:textColor="#000000"
+		android:text="" />	
+        
+    <com.google.ads.AdView android:id="@+id/adView"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentBottom="true"
+                         android:windowSoftInputMode="adjustPan"
+                         ads:adUnitId="a152328c4c081e7"
+                         ads:adSize="BANNER"
+                         ads:loadAdOnCreate="true"/>
+	
+</RelativeLayout>
